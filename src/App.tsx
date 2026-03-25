@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import logo from './image/logo.png';
+import imagedrink from './image/imagedrink.png';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -122,13 +123,13 @@ export default function App() {
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="lg:col-span-6 relative order-1 lg:order-2"
+            className="lg:col-span-6 relative order-1 lg:order-2 group"
           >
-            <div className="absolute -inset-4 border border-silver/20 rounded-t-full transform translate-x-4 translate-y-4"></div>
+            <div className="absolute -inset-4 border border-silver/20 rounded-t-[200px] transition-all duration-700 group-hover:border-silver/40"></div>
             <img 
-              src="https://images.unsplash.com/photo-1575037614876-c385380f0dce?q=80&w=2070&auto=format&fit=crop" 
+              src={imagedrink} 
               alt="Mixology Art" 
-              className="relative z-10 rounded-t-full shadow-2xl w-full object-cover h-[500px] md:h-[600px] grayscale-[20%] contrast-125"
+              className="relative z-10 rounded-t-[200px] shadow-2xl w-full object-cover h-[500px] md:h-[700px] transition-transform duration-700 group-hover:scale-[1.01]"
             />
           </motion.div>
         </div>
