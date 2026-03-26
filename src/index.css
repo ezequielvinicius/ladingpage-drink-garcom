@@ -23,6 +23,10 @@
   text-shadow: 0 0 15px rgba(212, 212, 216, 0.6);
 }
 
+.glow-image {
+  filter: drop-shadow(0 0 8px rgba(212, 212, 216, 0.4));
+}
+
 body {
   background-color: var(--color-deep-black);
   color: #EAEAEA;

@@ -2,6 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import logo from './image/logo.png';
 import imagedrink from './image/imagedrink.png';
+import caipirinha from './image/caipirinha.png';
+import caipiroska from './image/caipiroska.png';
+import gintropical from './image/GinTropical.png';
+import mojito from './image/Mojito - Editado.png';
+import sodaitaliana from './image/SodaItaliana.png';
+import moscowmule from './image/MoscowMule.png';
+import sexonthebeach from './image/SexOnTheBeach.png';
+import pinklemonade from './image/PinkLemonade.png';
+import aperolspritz from './image/AperolSpritz.png';
+import negroni from './image/Negroni.png';
+import orangevelvet from './image/orangevelvet .png';
+import whiskysour from './image/WhiskySour.png';
+import aperolcitrus from './image/AperolCitrus.png';
+import aguadeouro from './image/AguadeOuro.png';
+import ginpremium from './image/GinPremium.png';
+import abacaxilimao from './image/AbacaxiLimao.png';
+import morangouva from './image/MorangoUva.png';
+import maracujamorango from './image/MaracujaMorango.png';
+import cestafrutas from './image/CestaFrutas.png';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,12 +48,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-gray-200 font-sans selection:bg-silver selection:text-[#050505]">
-      
+
       {/* Navbar */}
       <nav className={`fixed w-full z-50 top-0 transition-all duration-700 ${scrolled ? 'bg-[#050505]/80 backdrop-blur-xl py-4 border-b border-white/5' : 'bg-transparent py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="font-serif text-2xl tracking-widest text-white flex flex-col items-center">
-            <img src={logo} alt="Drink & Garçom Logo" className="h-20" />
+            <img src={logo} alt="Drink & Garçom Logo" className="h-28 md:h-32 transition-all duration-300" />
           </div>
           <div className="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em] font-medium text-gray-400">
             <a href="#home" className="hover:text-silver transition-colors duration-300">Home</a>
@@ -50,7 +69,7 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen w-full flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
@@ -58,8 +77,8 @@ export default function App() {
         ></motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/30 via-[#050505]/60 to-[#050505]"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/50 via-transparent to-[#050505]/50"></div>
-        
-        <motion.div 
+
+        <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
@@ -71,15 +90,16 @@ export default function App() {
             <span className="w-8 h-[1px] bg-silver"></span>
           </motion.div>
           <motion.h1 variants={fadeUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-light mb-6 tracking-wide text-white uppercase leading-[1.1]">
-            A Arte de <br/>
+            A Arte de <br />
             <span className="text-silver font-script lowercase text-7xl md:text-9xl tracking-normal normal-case block mt-2 glow-silver">Celebrar</span>
           </motion.h1>
           <motion.p variants={fadeUp} className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl font-light tracking-wide">
-            Elevamos o padrão do seu evento com mixologia autoral, estética impecável e um serviço verdadeiramente premium.
+            Transformamos seu evento em uma experiência inesquecível. <br />
+            Mais que drinks, entregamos experiências que marcam — com profissionalismo, elegância e excelência. Eleve seu evento.
           </motion.p>
-          <motion.a 
+          <motion.a
             variants={fadeUp}
-            href="#planos" 
+            href="#planos"
             className="group relative px-8 py-4 overflow-hidden rounded-full border border-silver/50 text-silver hover:text-[#050505] transition-colors duration-500 text-xs uppercase tracking-[0.2em] flex items-center gap-3"
           >
             <div className="absolute inset-0 w-0 bg-silver transition-all duration-[500ms] ease-out group-hover:w-full -z-10"></div>
@@ -91,7 +111,7 @@ export default function App() {
       {/* About Section */}
       <section id="sobre" className="py-32 px-6 max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -100,14 +120,14 @@ export default function App() {
           >
             <motion.div variants={fadeUp} className="text-silver text-xs tracking-[0.3em] uppercase mb-4">A Essência</motion.div>
             <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-6xl font-light text-white tracking-wide mb-8 leading-tight">
-              Mais que drinks, <br/><span className="font-script text-silver text-6xl md:text-7xl lowercase glow-silver">memórias.</span>
+              Mais que drinks, <br /><span className="font-script text-silver text-6xl md:text-7xl lowercase glow-silver">memórias.</span>
             </motion.h2>
-            
+
             <motion.div variants={fadeUp} className="w-12 h-[1px] bg-silver mb-10"></motion.div>
-            
+
             <motion.div variants={fadeUp} className="space-y-6 text-gray-400 font-light leading-relaxed text-sm md:text-base tracking-wide">
               <p>
-                A <strong className="text-white font-normal">GARDS Bartenders</strong> nasceu da paixão por transformar eventos em experiências sensoriais inesquecíveis. Não servimos apenas coquetéis; entregamos arte em forma líquida.
+                A <strong className="text-white font-normal">Drink & Garçom</strong> nasceu da paixão por transformar eventos em experiências sensoriais inesquecíveis. Não servimos apenas coquetéis; entregamos arte em forma líquida.
               </p>
               <p>
                 Nossa equipe é formada por mixologistas de elite, treinados nos melhores bares do mundo, trazendo técnicas avançadas, ingredientes exóticos e uma apresentação visual de tirar o fôlego.
@@ -117,8 +137,8 @@ export default function App() {
               </p>
             </motion.div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, x: 20 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -126,9 +146,9 @@ export default function App() {
             className="lg:col-span-6 relative order-1 lg:order-2 group"
           >
             <div className="absolute -inset-4 border border-silver/20 rounded-t-[200px] transition-all duration-700 group-hover:border-silver/40"></div>
-            <img 
-              src={imagedrink} 
-              alt="Mixology Art" 
+            <img
+              src={imagedrink}
+              alt="Mixology Art"
               className="relative z-10 rounded-t-[200px] shadow-2xl w-full object-cover h-[500px] md:h-[700px] transition-transform duration-700 group-hover:scale-[1.01]"
             />
           </motion.div>
@@ -143,7 +163,7 @@ export default function App() {
           { img: 'https://images.unsplash.com/photo-1587223075055-82e9a937ddff?q=80&w=1000&auto=format&fit=crop', title: 'Premium' },
           { img: 'https://images.unsplash.com/photo-1609951651556-5334e2706168?q=80&w=1000&auto=format&fit=crop', title: 'Detalhes' }
         ].map((item, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -163,7 +183,7 @@ export default function App() {
 
       {/* Plans Section */}
       <section id="planos" className="py-32 px-6 max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -179,9 +199,9 @@ export default function App() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          
+
           {/* Card 1: Classic */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -191,35 +211,35 @@ export default function App() {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-silver/50 transition-all duration-500"></div>
             <h3 className="font-serif text-2xl font-light mb-2 text-white tracking-wider">Classic</h3>
             <div className="text-silver text-4xl font-light mb-8 font-serif">R$ 30 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
-            
+
             <div className="mb-8 flex-grow">
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mb-6 flex items-center gap-3 opacity-70">
                 <span className="w-6 h-[1px] bg-silver"></span> Drinks
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-300"><i className="fas fa-cocktail text-silver w-8 text-lg animate-floating"></i> Caipirinha</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-glass-martini-alt text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.2s'}}></i> Caipirosca</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-wine-glass text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.4s'}}></i> Gin Tropical</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-leaf text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.6s'}}></i> Mojito</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-glass-whiskey text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.8s'}}></i> Soda Italiana <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
+                <li className="flex items-center text-gray-300"><img src={caipirinha} alt="Caipirinha" className="w-8 h-8 object-contain mr-2 animate-floating" /> Caipirinha</li>
+                <li className="flex items-center text-gray-300"><img src={caipiroska} alt="Caipirosca" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.2s' }} /> Caipirosca</li>
+                <li className="flex items-center text-gray-300"><img src={gintropical} alt="Gin Tropical" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.4s' }} /> Gin Tropical</li>
+                <li className="flex items-center text-gray-300"><img src={mojito} alt="Mojito" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.6s' }} /> Mojito</li>
+                <li className="flex items-center text-gray-300"><img src={sodaitaliana} alt="Soda Italiana" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.8s' }} /> Soda Italiana <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
               </ul>
 
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mt-10 mb-6 flex items-center gap-3 opacity-70">
                 <span className="w-6 h-[1px] bg-silver"></span> Frutas
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-300"><i className="fas fa-lemon text-silver w-8 text-lg animate-floating"></i> Abacaxi & Limão</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-apple-alt text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.3s'}}></i> Morango & Uva</li>
+                <li className="flex items-center text-gray-300"><img src={abacaxilimao} alt="Abacaxi & Limão" className="w-8 h-8 object-contain mr-2 animate-floating" /> Abacaxi & Limão</li>
+                <li className="flex items-center text-gray-300"><img src={morangouva} alt="Morango & Uva" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.3s' }} /> Morango & Uva</li>
               </ul>
             </div>
-            
+
             <button className="w-full border border-white/10 text-gray-300 hover:border-silver hover:text-silver font-medium py-4 rounded-full tracking-[0.2em] uppercase text-[10px] transition-all duration-300 mt-auto">
               Selecionar
             </button>
           </motion.div>
 
           {/* Card 2: Premium */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -229,38 +249,38 @@ export default function App() {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-silver text-[#050505] text-[9px] font-bold uppercase tracking-[0.3em] py-1.5 px-6 rounded-b-lg shadow-lg">
               Mais Vendido
             </div>
-            
+
             <h3 className="font-serif text-2xl font-light mb-2 text-silver tracking-wider mt-4">Premium</h3>
             <div className="text-white text-5xl font-light mb-8 font-serif">R$ 40 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
-            
+
             <div className="mb-8 flex-grow">
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mb-6 flex items-center gap-3 opacity-70">
                 <span className="w-6 h-[1px] bg-silver"></span> Drinks
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-200"><i className="fas fa-mug-hot text-silver w-8 text-lg animate-floating glow-silver"></i> Moscow Mule</li>
-                <li className="flex items-center text-gray-200"><i className="fas fa-cocktail text-silver w-8 text-lg animate-floating glow-silver" style={{animationDelay: '0.2s'}}></i> Caipirinha</li>
-                <li className="flex items-center text-gray-200"><i className="fas fa-wine-glass text-silver w-8 text-lg animate-floating glow-silver" style={{animationDelay: '0.4s'}}></i> Gin Tropical</li>
-                <li className="flex items-center text-gray-200"><i className="fas fa-umbrella-beach text-silver w-8 text-lg animate-floating glow-silver" style={{animationDelay: '0.6s'}}></i> Sex on the Beach</li>
-                <li className="flex items-center text-gray-200"><i className="fas fa-glass-whiskey text-silver w-8 text-lg animate-floating glow-silver" style={{animationDelay: '0.8s'}}></i> Pink Lemonade <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
+                <li className="flex items-center text-gray-200"><img src={moscowmule} alt="Moscow Mule" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" /> Moscow Mule</li>
+                <li className="flex items-center text-gray-200"><img src={caipirinha} alt="Caipirinha" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" style={{ animationDelay: '0.2s' }} /> Caipirinha</li>
+                <li className="flex items-center text-gray-200"><img src={gintropical} alt="Gin Tropical" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" style={{ animationDelay: '0.4s' }} /> Gin Tropical</li>
+                <li className="flex items-center text-gray-200"><img src={sexonthebeach} alt="Sex on the Beach" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" style={{ animationDelay: '0.6s' }} /> Sex on the Beach</li>
+                <li className="flex items-center text-gray-200"><img src={pinklemonade} alt="Pink Lemonade" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" style={{ animationDelay: '0.8s' }} /> Pink Lemonade <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
               </ul>
 
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mt-10 mb-6 flex items-center gap-3 opacity-70">
                 <span className="w-6 h-[1px] bg-silver"></span> Frutas
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-200"><i className="fas fa-lemon text-silver w-8 text-lg animate-floating glow-silver"></i> Abacaxi & Limão</li>
-                <li className="flex items-center text-gray-200"><i className="fas fa-certificate text-silver w-8 text-lg animate-floating glow-silver" style={{animationDelay: '0.3s'}}></i> Maracujá & Morango</li>
+                <li className="flex items-center text-gray-200"><img src={abacaxilimao} alt="Abacaxi & Limão" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" /> Abacaxi & Limão</li>
+                <li className="flex items-center text-gray-200"><img src={maracujamorango} alt="Maracujá & Morango" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" style={{ animationDelay: '0.3s' }} /> Maracujá & Morango</li>
               </ul>
             </div>
-            
+
             <button className="w-full bg-silver text-[#050505] hover:bg-white font-medium py-4 rounded-full tracking-[0.2em] uppercase text-[10px] transition-colors duration-300 shadow-[0_0_20px_rgba(212,212,216,0.2)] mt-auto">
               Selecionar
             </button>
           </motion.div>
 
           {/* Card 3: Signature */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -270,31 +290,31 @@ export default function App() {
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-silver/50 transition-all duration-500"></div>
             <h3 className="font-serif text-2xl font-light mb-2 text-white tracking-wider">Signature</h3>
             <div className="text-silver text-4xl font-light mb-8 font-serif">R$ 50 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
-            
+
             <div className="mb-8 flex-grow">
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mb-6 flex items-center gap-3 opacity-70">
                 <span className="w-6 h-[1px] bg-silver"></span> Drinks
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-300"><i className="fas fa-wine-glass-alt text-silver w-8 text-lg animate-floating"></i> Aperol Spritz</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-glass-martini text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.1s'}}></i> Negroni</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-cocktail text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.2s'}}></i> Orange Velvet</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-glass-whiskey text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.3s'}}></i> Whisky Sour</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-gem text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.4s'}}></i> Gin Premium <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Especiarias</span></li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-wine-glass-alt text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.5s'}}></i> Aperol Citrus</li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-tint text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.6s'}}></i> Pink Lemonade <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
-                <li className="flex items-center text-gray-300"><i className="fas fa-star text-silver w-8 text-lg animate-floating" style={{animationDelay: '0.7s'}}></i> Água de Ouro <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
+                <li className="flex items-center text-gray-300"><img src={aperolspritz} alt="Aperol Spritz" className="w-8 h-8 object-contain mr-2 animate-floating" /> Aperol Spritz</li>
+                <li className="flex items-center text-gray-300"><img src={negroni} alt="Negroni" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.1s' }} /> Negroni</li>
+                <li className="flex items-center text-gray-300"><img src={orangevelvet} alt="Orange Velvet" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.2s' }} /> Orange Velvet</li>
+                <li className="flex items-center text-gray-300"><img src={whiskysour} alt="Whisky Sour" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.3s' }} /> Whisky Sour</li>
+                <li className="flex items-center text-gray-300"><img src={ginpremium} alt="Gin Premium" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.4s' }} /> Gin Premium <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Especiarias</span></li>
+                <li className="flex items-center text-gray-300"><img src={aperolcitrus} alt="Aperol Citrus" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.5s' }} /> Aperol Citrus</li>
+                <li className="flex items-center text-gray-300"><img src={pinklemonade} alt="Pink Lemonade" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.6s' }} /> Pink Lemonade <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
+                <li className="flex items-center text-gray-300"><img src={aguadeouro} alt="Água de Ouro" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.7s' }} /> Água de Ouro <span className="text-[9px] text-gray-500 ml-2 uppercase tracking-widest border border-white/10 px-2 py-0.5 rounded-full">Sem Álcool</span></li>
               </ul>
 
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mt-10 mb-6 flex items-center gap-3 opacity-70">
                 <span className="w-6 h-[1px] bg-silver"></span> Frutas
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-300"><i className="fas fa-shopping-basket text-silver w-8 text-lg animate-floating"></i> 5 Tipos Premium</li>
+                <li className="flex items-center text-gray-300"><img src={cestafrutas} alt="5 Tipos Premium" className="w-8 h-8 object-contain mr-2 animate-floating" /> 5 Tipos Premium</li>
                 <li className="text-[10px] text-gray-500 pl-11 tracking-wide">Abacaxi, Limão, Maracujá, Morango, Uva</li>
               </ul>
             </div>
-            
+
             <button className="w-full border border-white/10 text-gray-300 hover:border-silver hover:text-silver font-medium py-4 rounded-full tracking-[0.2em] uppercase text-[10px] transition-all duration-300 mt-auto">
               Selecionar
             </button>
@@ -302,11 +322,11 @@ export default function App() {
 
         </div>
       </section>
-      
+
       {/* Footer */}
       <footer className="border-t border-white/5 py-16 bg-[#050505] text-center">
         <div className="font-serif text-2xl tracking-widest text-white mb-8 flex flex-col items-center">
-          <img src={logo} alt="Drink & Garçom Logo" className="h-28 opacity-80" />
+          <img src={logo} alt="Drink & Garçom Logo" className="h-40 md:h-48 opacity-90 transition-all duration-300" />
         </div>
         <div className="flex justify-center gap-6 mb-8">
           <a href="#" className="text-gray-500 hover:text-silver transition-colors"><i className="fab fa-instagram text-xl"></i></a>
@@ -317,11 +337,11 @@ export default function App() {
       </footer>
 
       {/* Floating WhatsApp */}
-      <motion.a 
+      <motion.a
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 200, damping: 20 }}
-        href="#" 
+        href="#"
         className="fixed bottom-8 right-8 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 z-50"
       >
         <i className="fab fa-whatsapp"></i>
