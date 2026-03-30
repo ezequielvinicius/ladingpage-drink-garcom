@@ -20,6 +20,7 @@ import ginpremium from './image/GinPremium.png';
 import abacaxilimao from './image/AbacaxiLimao.png';
 import morangouva from './image/MorangoUva.png';
 import maracujamorango from './image/MaracujaMorango.png';
+import maracuja from './image/maracuja.png';
 import cestafrutas from './image/CestaFrutas.png';
 
 export default function App() {
@@ -58,8 +59,8 @@ export default function App() {
           <div className="hidden md:flex space-x-10 text-xs uppercase tracking-[0.2em] font-medium text-gray-400">
             <a href="#home" className="hover:text-silver transition-colors duration-300">Home</a>
             <a href="#sobre" className="hover:text-silver transition-colors duration-300">A Essência</a>
-            <a href="#galeria" className="hover:text-silver transition-colors duration-300">Galeria</a>
-            <a href="#planos" className="hover:text-silver transition-colors duration-300">Cartas</a>
+
+            <a href="#planos" className="hover:text-silver transition-colors duration-300">Cardápios</a>
           </div>
           <a href="#planos" className="hidden md:block border border-silver/50 text-silver px-6 py-2 rounded-full text-xs uppercase tracking-[0.2em] hover:bg-silver hover:text-[#050505] transition-all duration-300">
             Reservar
@@ -99,7 +100,9 @@ export default function App() {
           </motion.p>
           <motion.a
             variants={fadeUp}
-            href="#planos"
+            href="https://wa.me/5565996872894?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20meu%20evento."
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative px-8 py-4 overflow-hidden rounded-full border border-silver/50 text-silver hover:text-[#050505] transition-colors duration-500 text-xs uppercase tracking-[0.2em] flex items-center gap-3"
           >
             <div className="absolute inset-0 w-0 bg-silver transition-all duration-[500ms] ease-out group-hover:w-full -z-10"></div>
@@ -155,31 +158,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Vertical Gallery Section */}
-      <section id="galeria" className="w-full h-[60vh] md:h-[70vh] flex flex-col md:flex-row overflow-hidden border-y border-white/5">
-        {[
-          { img: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=2069&auto=format&fit=crop', title: 'Clássicos' },
-          { img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=1000&auto=format&fit=crop', title: 'Autorais' },
-          { img: 'https://images.unsplash.com/photo-1587223075055-82e9a937ddff?q=80&w=1000&auto=format&fit=crop', title: 'Premium' },
-          { img: 'https://images.unsplash.com/photo-1609951651556-5334e2706168?q=80&w=1000&auto=format&fit=crop', title: 'Detalhes' }
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="flex-1 group relative overflow-hidden bg-cover bg-center transition-all duration-700 hover:flex-[2] cursor-pointer border-t md:border-t-0 md:border-l border-white/10"
-            style={{ backgroundImage: `url('${item.img}')` }}
-          >
-            <div className="absolute inset-0 bg-black/60 group-hover:bg-black/20 transition-all duration-700 flex items-center justify-center">
-              <h3 className="text-white font-serif text-2xl md:text-3xl tracking-widest uppercase opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                {item.title}
-              </h3>
-            </div>
-          </motion.div>
-        ))}
-      </section>
+
 
       {/* Plans Section */}
       <section id="planos" className="py-32 px-6 max-w-7xl mx-auto">
@@ -191,10 +170,10 @@ export default function App() {
           className="text-center mb-24"
         >
           <motion.div variants={fadeUp} className="text-silver text-xs tracking-[0.3em] uppercase mb-4">Investimento</motion.div>
-          <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl font-light mb-6 tracking-widest uppercase text-white">Nossas <span className="font-script text-silver text-6xl lowercase glow-silver">Cartas</span></motion.h2>
+          <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl font-light mb-6 tracking-widest uppercase text-white">Nossos <span className="font-script text-silver text-6xl lowercase glow-silver">Cardápios</span></motion.h2>
           <motion.div variants={fadeUp} className="w-16 h-[1px] bg-silver mx-auto mb-8"></motion.div>
           <motion.p variants={fadeUp} className="text-gray-400 max-w-2xl mx-auto font-light tracking-wide text-sm md:text-base">
-            Selecione a experiência ideal para o seu evento. Todos os planos incluem serviço de bartender profissional, taças de cristal e insumos de altíssima qualidade.
+            Selecione a experiência perfeita para os seus convidados. Nossos pacotes incluem bartenders profissionais, jogo de copos — incluindo as tradicionais canecas de cobre — e ingredientes premium para garantir o melhor sabor.
           </motion.p>
         </motion.div>
 
@@ -209,8 +188,8 @@ export default function App() {
             className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-10 transition-all duration-500 hover:-translate-y-2 hover:border-silver/30 flex flex-col relative overflow-hidden group"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-silver/50 transition-all duration-500"></div>
-            <h3 className="font-serif text-2xl font-light mb-2 text-white tracking-wider">Classic</h3>
-            <div className="text-silver text-4xl font-light mb-8 font-serif">R$ 30 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
+            <h3 className="font-serif text-2xl font-light mb-2 text-white tracking-wider">Normal</h3>
+            <div className="text-silver text-4xl font-light mb-8 font-serif">R$ 29,99 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
 
             <div className="mb-8 flex-grow">
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mb-6 flex items-center gap-3 opacity-70">
@@ -232,10 +211,6 @@ export default function App() {
                 <li className="flex items-center text-gray-300"><img src={morangouva} alt="Morango & Uva" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.3s' }} /> Morango & Uva</li>
               </ul>
             </div>
-
-            <button className="w-full border border-white/10 text-gray-300 hover:border-silver hover:text-silver font-medium py-4 rounded-full tracking-[0.2em] uppercase text-[10px] transition-all duration-300 mt-auto">
-              Selecionar
-            </button>
           </motion.div>
 
           {/* Card 2: Premium */}
@@ -250,8 +225,8 @@ export default function App() {
               Mais Vendido
             </div>
 
-            <h3 className="font-serif text-2xl font-light mb-2 text-silver tracking-wider mt-4">Premium</h3>
-            <div className="text-white text-5xl font-light mb-8 font-serif">R$ 40 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
+            <h3 className="font-serif text-2xl font-light mb-2 text-silver tracking-wider mt-4">Médio</h3>
+            <div className="text-white text-5xl font-light mb-8 font-serif">R$ 39,90 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
 
             <div className="mb-8 flex-grow">
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mb-6 flex items-center gap-3 opacity-70">
@@ -273,10 +248,6 @@ export default function App() {
                 <li className="flex items-center text-gray-200"><img src={maracujamorango} alt="Maracujá & Morango" className="w-8 h-8 object-contain mr-2 animate-floating glow-image" style={{ animationDelay: '0.3s' }} /> Maracujá & Morango</li>
               </ul>
             </div>
-
-            <button className="w-full bg-silver text-[#050505] hover:bg-white font-medium py-4 rounded-full tracking-[0.2em] uppercase text-[10px] transition-colors duration-300 shadow-[0_0_20px_rgba(212,212,216,0.2)] mt-auto">
-              Selecionar
-            </button>
           </motion.div>
 
           {/* Card 3: Signature */}
@@ -288,8 +259,8 @@ export default function App() {
             className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-10 transition-all duration-500 hover:-translate-y-2 hover:border-silver/30 flex flex-col relative overflow-hidden group"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-silver/50 transition-all duration-500"></div>
-            <h3 className="font-serif text-2xl font-light mb-2 text-white tracking-wider">Signature</h3>
-            <div className="text-silver text-4xl font-light mb-8 font-serif">R$ 50 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
+            <h3 className="font-serif text-2xl font-light mb-2 text-white tracking-wider">Sofisticado</h3>
+            <div className="text-silver text-4xl font-light mb-8 font-serif">R$ 49,90 <span className="text-xs text-gray-500 font-sans font-light tracking-widest uppercase">/ pessoa</span></div>
 
             <div className="mb-8 flex-grow">
               <h4 className="text-white uppercase tracking-[0.2em] text-[10px] font-medium mb-6 flex items-center gap-3 opacity-70">
@@ -310,14 +281,11 @@ export default function App() {
                 <span className="w-6 h-[1px] bg-silver"></span> Frutas
               </h4>
               <ul className="space-y-5 font-light text-sm">
-                <li className="flex items-center text-gray-300"><img src={cestafrutas} alt="5 Tipos Premium" className="w-8 h-8 object-contain mr-2 animate-floating" /> 5 Tipos Premium</li>
-                <li className="text-[10px] text-gray-500 pl-11 tracking-wide">Abacaxi, Limão, Maracujá, Morango, Uva</li>
+                <li className="flex items-center text-gray-300"><img src={abacaxilimao} alt="Abacaxi & Limão" className="w-8 h-8 object-contain mr-2 animate-floating" /> Abacaxi & Limão</li>
+                <li className="flex items-center text-gray-300"><img src={morangouva} alt="Morango & Uva" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.2s' }} /> Morango & Uva</li>
+                <li className="flex items-center text-gray-300"><img src={maracuja} alt="Maracujá" className="w-8 h-8 object-contain mr-2 animate-floating" style={{ animationDelay: '0.4s' }} /> Maracujá</li>
               </ul>
             </div>
-
-            <button className="w-full border border-white/10 text-gray-300 hover:border-silver hover:text-silver font-medium py-4 rounded-full tracking-[0.2em] uppercase text-[10px] transition-all duration-300 mt-auto">
-              Selecionar
-            </button>
           </motion.div>
 
         </div>
@@ -329,9 +297,7 @@ export default function App() {
           <img src={logo} alt="Drink & Garçom Logo" className="h-40 md:h-48 opacity-90 transition-all duration-300" />
         </div>
         <div className="flex justify-center gap-6 mb-8">
-          <a href="#" className="text-gray-500 hover:text-silver transition-colors"><i className="fab fa-instagram text-xl"></i></a>
-          <a href="#" className="text-gray-500 hover:text-silver transition-colors"><i className="fab fa-facebook-f text-xl"></i></a>
-          <a href="#" className="text-gray-500 hover:text-silver transition-colors"><i className="fab fa-whatsapp text-xl"></i></a>
+          <a href="https://wa.me/5565996872894?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20meu%20evento." target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-silver transition-colors"><i className="fab fa-whatsapp text-xl"></i></a>
         </div>
         <p className="text-gray-600 text-[10px] tracking-[0.2em] uppercase">&copy; 2026 Drink & Garçom. Todos os direitos reservados.</p>
       </footer>
@@ -341,7 +307,9 @@ export default function App() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 200, damping: 20 }}
-        href="#"
+        href="https://wa.me/5565996872894?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20o%20meu%20evento."
+        target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-8 right-8 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 z-50"
       >
         <i className="fab fa-whatsapp"></i>
